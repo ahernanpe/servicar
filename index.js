@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const app = express();
 const importData = require('./data.json');
+const importData2 = require('./data2.json');
 const port = 3000;
 
 
@@ -13,7 +14,11 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 
 app.get("/services", (req,res) => {
-    res.send(importData)
+    res.send(importData2)
+})
+
+app.get("/service", (req,res) => {
+    res.send(importData2)
 })
 
 
