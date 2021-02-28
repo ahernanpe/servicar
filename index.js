@@ -14,7 +14,7 @@ app.get('/', (req, res) => res.send('Hello World!'));
 
 
 app.get("/services", (req,res) => {
-    res.send(importData2)
+    res.send(importData)
 })
 
 app.get("/service", (req,res) => {
