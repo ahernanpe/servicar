@@ -1,12 +1,11 @@
 
 const express = require('express');
 const cors = require('cors');
-
 const app = express();
+
 const importData = require('./data.json');
 const importData2 = require('./data2.json');
 const port = 3000;
-
 
 app.use(cors())
 
@@ -20,7 +19,6 @@ app.get("/services", (req,res) => {
 app.get("/service", (req,res) => {
     res.send(importData2)
 })
-
 
 
 app.listen(process.env.PORT || port, () => console.log(`Example app listening at http://localhost:${port}`));
